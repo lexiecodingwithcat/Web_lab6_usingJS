@@ -10,8 +10,8 @@ You are encouraged to use the provided naming convention for ease of review.
 /* create variables to hold the values for modelName and duration */
 
 // INSERT YOUR CODE HERE
-let nameModel = modelName
-let duration = duration
+let modelName = 'XYZ'
+let duration = 0
 let newTotal = 0
 
 
@@ -29,10 +29,10 @@ let newTotal = 0
 // INSERT YOUR CODE HERE
 const recalculate = () => {
     let costSpan = document.getElementById('calculated-cost')
-    if (nameModel == 'XYZ'){
-        newTotal += duration*100
-    }else if(nameModel == 'CPRG'){
-        newTotal += duration*123
+    if (modelName == 'XYZ'){
+        newTotal += (duration*100)
+    }else if(modelName == 'CPRG'){
+        newTotal += (duration*123)
     }
     costSpan.innerHTML = newTotal
 }
@@ -51,21 +51,22 @@ const recalculate = () => {
     - if modelName is currently "CPRG", change the value of modelName to "XYZ", and change the innerHTML of the model-text span element to "Model XYZ"
     - then, recalculate() the total cost.
 - finally, uncomment the following line of JavaScript to have this function run automatically whenever the pseudo-button is clicked: */
-    modelButton.addEventListener("click", changeModel);
+  
 
 // INSERT YOUR CODE HERE
-let swtichModel = document.getElementById('model-button')
+let modelButton = document.getElementById('model-button')
 const changeModel = ()=>{
     let modelText = document.getElementById('model-text')
-    if (nameModel == 'XYZ'){
-        nameModel == 'CPRG'
+    if (modelName == 'XYZ'){
+        modelName = 'CPRG'
         modelText.innerHTML = 'Model CPRG'
-    }else if(nameModel =='CPRG'){
-        nameModel == 'XYZ'
+    }else if(modelName =='CPRG'){
+        modelName = 'XYZ'
         modelText.innerHTML = 'Model XYZ'
     }
     recalculate()
 }
+modelButton.addEventListener("click", changeModel);
 
 
 
