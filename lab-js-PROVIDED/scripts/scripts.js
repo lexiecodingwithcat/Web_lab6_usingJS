@@ -51,9 +51,21 @@ const recalculate = () => {
     - if modelName is currently "CPRG", change the value of modelName to "XYZ", and change the innerHTML of the model-text span element to "Model XYZ"
     - then, recalculate() the total cost.
 - finally, uncomment the following line of JavaScript to have this function run automatically whenever the pseudo-button is clicked: */
-    // modelButton.addEventListener("click", changeModel);
+    modelButton.addEventListener("click", changeModel);
 
 // INSERT YOUR CODE HERE
+let swtichModel = document.getElementById('model-button')
+const changeModel = ()=>{
+    let modelText = document.getElementById('model-text')
+    if (nameModel == 'XYZ'){
+        nameModel == 'CPRG'
+        modelText.innerHTML = 'Model CPRG'
+    }else if(nameModel =='CPRG'){
+        nameModel == 'XYZ'
+        modelText.innerHTML = 'Model XYZ'
+    }
+    recalculate()
+}
 
 
 
@@ -74,5 +86,14 @@ const recalculate = () => {
 
 // INSERT YOUR CODE HERE
 
+let changeDurationBtn = document.getElementById('duration-button')
+const changeDuration = ()=>{
+    let durationText = document.getElementById('duration-text')
+    duration = prompt('please enther the duration')
+    durationText.innerHTML = duration 
+    recalculate()
+
+}
+changeDurationBtn.addEventListener("click",changeDuration)
 
 
