@@ -1,18 +1,17 @@
-/****************** YOUR NAME: Tianzi Cui
+// ****************** YOUR NAME: Tianzi Cui
 
-The instructions describe the missing logic that is needed; you will translate these into JavaScript in the places indicated.
+// The instructions describe the missing logic that is needed; you will translate these into JavaScript in the places indicated.
 
-You are encouraged to use the provided naming convention for ease of review.
+// You are encouraged to use the provided naming convention for ease of review.
 
-*/
 
 /****************** create variables ******************/
 /* create variables to hold the values for modelName and duration */
 
 // INSERT YOUR CODE HERE
-let modelName = 'XYZ'
-let duration = 0
-let newTotal = 0
+let modelName = 'XYZ';
+let duration = 0;
+let newTotal = 0;
 
 
 
@@ -28,14 +27,14 @@ let newTotal = 0
 
 // INSERT YOUR CODE HERE
 const recalculate = () => {
-    let costSpan = document.getElementById('calculated-cost')
+    let costSpan = document.getElementById('calculated-cost');
     if (modelName == 'XYZ'){
-        newTotal += (duration*100)
+        newTotal += (duration*100);
     }else if(modelName == 'CPRG'){
-        newTotal += (duration*123)
-    }
-    costSpan.innerHTML = newTotal
-}
+        newTotal += (duration*123);
+    };
+    costSpan.innerHTML = newTotal;
+};
 
 
 
@@ -54,18 +53,18 @@ const recalculate = () => {
   
 
 // INSERT YOUR CODE HERE
-let modelButton = document.getElementById('model-button')
+let modelButton = document.getElementById('model-button');
 const changeModel = ()=>{
-    let modelText = document.getElementById('model-text')
+    let modelText = document.getElementById('model-text');
     if (modelName == 'XYZ'){
-        modelName = 'CPRG'
-        modelText.innerHTML = 'Model CPRG'
+        modelName = 'CPRG';
+        modelText.innerHTML = 'Model CPRG';
     }else if(modelName =='CPRG'){
-        modelName = 'XYZ'
-        modelText.innerHTML = 'Model XYZ'
-    }
-    recalculate()
-}
+        modelName = 'XYZ';
+        modelText.innerHTML = 'Model XYZ';
+    };
+    recalculate();
+};
 modelButton.addEventListener("click", changeModel);
 
 
@@ -87,14 +86,13 @@ modelButton.addEventListener("click", changeModel);
 
 // INSERT YOUR CODE HERE
 
-let changeDurationBtn = document.getElementById('duration-button')
+let changeDurationBtn = document.getElementById('duration-button');
 const changeDuration = ()=>{
-    let durationText = document.getElementById('duration-text')
-    duration = prompt('please enther the duration')
-    durationText.innerHTML = duration 
-    recalculate()
-
-}
-changeDurationBtn.addEventListener("click",changeDuration)
+    let durationText = document.getElementById('duration-text');
+    duration = prompt('please enther the duration');
+    durationText.innerHTML = duration;
+    recalculate();
+};
+changeDurationBtn.addEventListener("click",changeDuration);
 
 
