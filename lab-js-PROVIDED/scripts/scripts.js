@@ -31,7 +31,7 @@ const recalculate = () => {
     if (modelName == 'XYZ'){
         newTotal += (duration*100);
     }else if(modelName == 'CPRG'){
-        newTotal += (duration*123);
+        newTotal += (duration*213);
     };
     costSpan.innerHTML = newTotal;
 };
